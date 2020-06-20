@@ -3,12 +3,13 @@ const Workout = require("../models/workouts.js");
 module.exports = (app) => {
 
     //gets workouts from database
-    app.get("api/workouts", (req, res) => {
-        Workout.find()
+    app.get("/api/workouts", (req, res) => {
+        Workout.find({})
             .then(data => {
                 res.json(data);
             })
             .catch(err => {
+                console.log("Error getting workouts", err);
                 res.json(err);
             }) 
     });
@@ -37,6 +38,6 @@ module.exports = (app) => {
             console.log("Could not add exercise: ", err);
             res.json(err);
         })
-    })
+    });
 
 };
