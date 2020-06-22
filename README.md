@@ -2,7 +2,7 @@
 
 Keep track of all of your workouts with the FitnessTracker. Create workouts and add exercises to your workouts in order to keep accurate count of every pound you've lifted or mile you've run. 
 
-![fitness tracker homepage](WorkoutTracker.png)
+![fitness tracker homepage](./public/WorkoutTracker.png)
 
 ![add an exercise page](addExercise.png)
 
