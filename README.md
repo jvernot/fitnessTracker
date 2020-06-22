@@ -4,7 +4,7 @@ Keep track of all of your workouts with the FitnessTracker. Create workouts and 
 
 ![fitness tracker homepage](./public/WorkoutTracker.png)
 
-![add an exercise page](addExercise.png)
+![add an exercise page](./public/addExercise.png)
 
 ## The Details
 
@@ -14,7 +14,7 @@ Fitness Tracker is a simple full-stack application built using node.js, express.
 
 My main goal for this project was to set up the database models and utilize mongoose to handle the data. A majority of the front end code was provided for me. One of the more interesting things about this project is the use of virtual properties in the mongoose schema. Using a virtual (a property not stored in MongoDB) was a simple solution to dynamically add up the durations of all the exercises in a workout and display the total for the last workout shown on the main page. The code for this virtual is shown below.
 
-![code for virtual](virtualCode.png)
+![code for virtual](./public/virtualCode.png)
 
 
 ## Usage
