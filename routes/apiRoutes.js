@@ -15,7 +15,7 @@ module.exports = (app) => {
     });
     
     // for creating a new workout in the database
-    app.post("/api/workouts", ( req, res) => {
+    app.post("/api/workouts", (req, res) => {
         
         Workout.create({ type: "workout" })
         .then(data => {
@@ -27,7 +27,7 @@ module.exports = (app) => {
         })
     });
 
-    //used in api.js to add an exercise to an exisiting workout
+    // used in api.js to add an exercise to an exisiting workout
     app.put("/api/workouts/:id", ({ body, params }, res) => {
         Workout.findByIdAndUpdate(
             params.id,
@@ -38,6 +38,18 @@ module.exports = (app) => {
             console.log("Could not add exercise: ", err);
             res.json(err);
         })
+    });
+
+    // get workouts in range
+    app.get("/api/workouts/range", (req, res) => {
+        Workout.find({})
+            .then(data => {
+                res.json(data);
+            })
+            .catch(err => {
+                console.log("Error getting workouts", err);
+                res.json(err);
+            }) 
     });
 
 };
